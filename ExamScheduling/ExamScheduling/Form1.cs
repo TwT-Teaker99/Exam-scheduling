@@ -80,9 +80,9 @@ namespace ExamScheduling
             }
 
             tb.convertDS1(count, HP, H);
-            int[] Bac = new int[10];
+            int[] Bac = new int[100];
             tb.BacDinh(H, count, Bac);
-            int[] Dinh = new int[10];
+            int[] Dinh = new int[100];
             tb.MangDinh(count, Dinh);
             tb.SortDinh(Dinh, Bac, count);
             tb.Tomau1(H, Dinh, count, HP);
@@ -119,12 +119,12 @@ namespace ExamScheduling
                         if (k < Convert.ToInt32(tbSLPhong.Text))
                         {
                             k++;
-                            dt.Rows.Add(hptemp.MaHP, Date.ToString("dd/mm/yyyy"), k);
+                            dt.Rows.Add(hptemp.MaHP, Date.ToString("dd/MM/yyyy"), k);
                         }
                         else
                         {
                             Date = Date.AddDays(1);
-                            dt.Rows.Add(hptemp.MaHP, Date.ToString("dd/mm/yyyy"), k);
+                            dt.Rows.Add(hptemp.MaHP, Date.ToString("dd/MM/yyyy"), k);
                             k = 0;
                         }
 
